@@ -35,21 +35,33 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         
     //Write the getWeatherData method here:
     
-    //MARK: - JSON Parsing
+    //MARK: - JSONParsing
    
     //Write the updateWeatherData method here:
     
-    //MARK: - UI Updates
+    //MARK: - UIUpdates
    
     //Write the updateUIWithWeatherData method here:
     
-    //MARK: - Location Manager Delegate Methods
+    //MARK: - UpdateLocationFuncs
     
-    //Write the didUpdateLocations method here:
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[locations.count - 1]
+        if location.horizontalAccuracy > 0 {
+            locationManager.stopUpdatingLocation()
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+        } else {
+            cityLabel.text = "Location Innacurate"
+        }
+    }
     
-    //Write the didFailWithError method here:
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+        cityLabel.text = "Location Unavaliable"
+    }
     
-    //MARK: - Change City Delegate methods
+    //MARK: - ChangeCityDelegate
     
     //Write the userEnteredANewCityName Delegate method here:
         
