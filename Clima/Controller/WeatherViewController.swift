@@ -17,7 +17,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: - Properties
     
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
-    let APP_ID = "e72ca729af228beabd5d20e3b7749713"
+    let APP_ID = "4dafda03b66db36f9b64d621aecb2b3d"
     let locationManager = CLLocationManager()
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
@@ -39,7 +39,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {
             response in
             if response.result.isSuccess {
-                //something something
+                let weatherJSON: JSON = JSON(response.result.value!)
+                self.updateWeatherData(json: weatherJSON)
             } else {
                 self.cityLabel.text = "Conection Issues"
             }
@@ -48,11 +49,15 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: - JSONParsing
    
-    //Write the updateWeatherData method here:
+    func updateWeatherData(json: JSON) {
+        let _/*temp*/ = json["main"]["temp"]
+    }
     
     //MARK: - UIUpdates
    
-    //Write the updateUIWithWeatherData method here:
+    func updateUIWithWeatherData() {
+        //meow
+    }
     
     //MARK: - UpdateLocationFuncs
     
@@ -60,6 +65,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
             locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
             let latitude = String(location.coordinate.latitude)
             let longitude = String(location.coordinate.longitude)
             let params: [String: String] = ["lat": latitude,
