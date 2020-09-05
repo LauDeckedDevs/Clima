@@ -51,15 +51,24 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: - JSONParsing
    
     func updateWeatherData(json: JSON) {
-        weatherDataModel.temp = Int(json["main"]["temp"].double! - 273.15)
-        weatherDataModel.city = json["sys"]["name"].stringValue
-        weatherDataModel.condition = json["weather"][0]["id"].intValue
+        if let tempData = json["main"]["temp"].double {
+            weatherDataModel.temp = Int(tempData - 273.15)
+            weatherDataModel.city = json["name"].stringValue
+            lleidaIsCooler()
+            weatherDataModel.condition = json["weather"][0]["id"].intValue
+            weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
+            updateUIWithWeatherData()
+        } else {
+            cityLabel.text = "Weather Unavailable"
+        }
     }
     
     //MARK: - UIUpdates
    
     func updateUIWithWeatherData() {
-        //meow
+        temperatureLabel.text = "\(weatherDataModel.temp)º"
+        cityLabel.text = weatherDataModel.city
+        weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
     }
     
     //MARK: - UpdateLocationFuncs
@@ -83,6 +92,14 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
         cityLabel.text = "Location Unavaliable"
+    }
+    
+    //MARK: - LleidaIsCooler
+    
+    func lleidaIsCooler() {
+        if weatherDataModel.city == "Lérida" {
+            weatherDataModel.city = "Lleida"
+        }
     }
     
     //MARK: - ChangeCityDelegate
