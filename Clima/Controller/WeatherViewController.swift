@@ -107,4 +107,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     //Write the userEnteredANewCityName Delegate method here:
         
     //Write the PrepareForSegue Method here
+    
+    //MARK: - PanSegue
+    
+   @IBAction func panSegue(sender: UIPanGestureRecognizer) {
+        self.performSegue(withIdentifier: "cardViewSegue", sender: nil)
+    }
 }
