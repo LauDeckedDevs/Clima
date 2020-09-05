@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,9 +54,9 @@
                                         <rect key="frame" x="16" y="129" width="343" height="229"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-Cu-XmK" userLabel="City Label">
-                                        <rect key="frame" x="16" y="360" width="269" height="94"/>
+                                        <rect key="frame" x="16" y="360" width="343" height="94"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="269" id="JU0-xy-RBy"/>
+                                            <constraint firstAttribute="width" constant="343" id="JU0-xy-RBy"/>
                                             <constraint firstAttribute="height" constant="94" id="bSX-HH-pWl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="259"/>
+            <point key="canvasLocation" x="16.800000000000001" y="258.62068965517244"/>
         </scene>
         <!--Change City View Controller-->
         <scene sceneID="9fV-L8-Kpp">
@@ -189,9 +189,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.right.arrow.left" catalog="system" width="58" height="64"/>
+        <image name="arrow.right.arrow.left" catalog="system" width="119" height="128"/>
         <image name="background" width="500" height="755"/>
-        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="cityBackground" width="600" height="399.5"/>
     </resources>
 </document>
