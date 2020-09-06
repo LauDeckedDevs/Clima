@@ -13,7 +13,6 @@ import SwiftyJSON
 
 class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
-
     //MARK: - Properties
     
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
@@ -29,7 +28,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
@@ -104,9 +103,9 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: - ChangeCityDelegate
     
-    //Write the userEnteredANewCityName Delegate method here:
+    func userCustomLocation() {
         
-    //Write the PrepareForSegue Method here
+    }
     
     //MARK: - PanSegue
     
