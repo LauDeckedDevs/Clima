@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		D321420D24D1F325008AC87B /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420A24D1F325008AC87B /* ChangeCityViewController.swift */; };
 		D321420E24D1F325008AC87B /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420B24D1F325008AC87B /* WeatherDataModel.swift */; };
 		D321420F24D1F325008AC87B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420C24D1F325008AC87B /* WeatherViewController.swift */; };
+		D3DB887C25124E0C00397635 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB887B25124E0B00397635 /* CustomButton.swift */; };
 		E41380E96FC59D8FA0A7531D /* Pods_Clima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6598575F4036542213BCF8FE /* Pods_Clima.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		D321420A24D1F325008AC87B /* ChangeCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		D321420B24D1F325008AC87B /* WeatherDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		D321420C24D1F325008AC87B /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		D3DB887B25124E0B00397635 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				D32141F924D1F227008AC87B /* Main.storyboard */,
 				D32141FE24D1F229008AC87B /* LaunchScreen.storyboard */,
+				D3DB887D25124E1500397635 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +122,14 @@
 				D32141F524D1F227008AC87B /* SceneDelegate.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3DB887D25124E1500397635 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB887B25124E0B00397635 /* CustomButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +170,7 @@
 				};
 			};
 			buildConfigurationList = D32141EB24D1F227008AC87B /* Build configuration list for PBXProject "Clima" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -238,6 +249,7 @@
 			files = (
 				D321420E24D1F325008AC87B /* WeatherDataModel.swift in Sources */,
 				D321420F24D1F325008AC87B /* WeatherViewController.swift in Sources */,
+				D3DB887C25124E0C00397635 /* CustomButton.swift in Sources */,
 				D32141F424D1F227008AC87B /* AppDelegate.swift in Sources */,
 				D32141F624D1F227008AC87B /* SceneDelegate.swift in Sources */,
 				D321420D24D1F325008AC87B /* ChangeCityViewController.swift in Sources */,
@@ -316,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -370,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
