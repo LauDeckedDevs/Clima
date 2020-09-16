@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2835C9C225125AF400A791BB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C9C125125AF400A791BB /* CustomButton.swift */; };
 		D32141F424D1F227008AC87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32141F324D1F227008AC87B /* AppDelegate.swift */; };
 		D32141F624D1F227008AC87B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32141F524D1F227008AC87B /* SceneDelegate.swift */; };
 		D32141FB24D1F227008AC87B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32141F924D1F227008AC87B /* Main.storyboard */; };
@@ -15,11 +16,11 @@
 		D321420D24D1F325008AC87B /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420A24D1F325008AC87B /* ChangeCityViewController.swift */; };
 		D321420E24D1F325008AC87B /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420B24D1F325008AC87B /* WeatherDataModel.swift */; };
 		D321420F24D1F325008AC87B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420C24D1F325008AC87B /* WeatherViewController.swift */; };
-		D3DB8880251258DA00397635 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB887F251258DA00397635 /* CustomButton.swift */; };
 		E41380E96FC59D8FA0A7531D /* Pods_Clima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6598575F4036542213BCF8FE /* Pods_Clima.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2835C9C125125AF400A791BB /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		494351535287F32531A5FD30 /* Pods-Clima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clima.release.xcconfig"; path = "Target Support Files/Pods-Clima/Pods-Clima.release.xcconfig"; sourceTree = "<group>"; };
 		6598575F4036542213BCF8FE /* Pods_Clima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		756BC25AC41046F518E14F8B /* Pods-Clima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clima.debug.xcconfig"; path = "Target Support Files/Pods-Clima/Pods-Clima.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		D321420A24D1F325008AC87B /* ChangeCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		D321420B24D1F325008AC87B /* WeatherDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		D321420C24D1F325008AC87B /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		D3DB887F251258DA00397635 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 		D3DB887E251258C700397635 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D3DB887F251258DA00397635 /* CustomButton.swift */,
+				2835C9C125125AF400A791BB /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 			files = (
 				D321420E24D1F325008AC87B /* WeatherDataModel.swift in Sources */,
 				D321420F24D1F325008AC87B /* WeatherViewController.swift in Sources */,
-				D3DB8880251258DA00397635 /* CustomButton.swift in Sources */,
+				2835C9C225125AF400A791BB /* CustomButton.swift in Sources */,
 				D32141F424D1F227008AC87B /* AppDelegate.swift in Sources */,
 				D32141F624D1F227008AC87B /* SceneDelegate.swift in Sources */,
 				D321420D24D1F325008AC87B /* ChangeCityViewController.swift in Sources */,
