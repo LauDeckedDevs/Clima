@@ -15,7 +15,7 @@
 		D321420D24D1F325008AC87B /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420A24D1F325008AC87B /* ChangeCityViewController.swift */; };
 		D321420E24D1F325008AC87B /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420B24D1F325008AC87B /* WeatherDataModel.swift */; };
 		D321420F24D1F325008AC87B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321420C24D1F325008AC87B /* WeatherViewController.swift */; };
-		D3DB887C25124E0C00397635 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB887B25124E0B00397635 /* CustomButton.swift */; };
+		D3DB8880251258DA00397635 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB887F251258DA00397635 /* CustomButton.swift */; };
 		E41380E96FC59D8FA0A7531D /* Pods_Clima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6598575F4036542213BCF8FE /* Pods_Clima.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		D321420A24D1F325008AC87B /* ChangeCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		D321420B24D1F325008AC87B /* WeatherDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		D321420C24D1F325008AC87B /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		D3DB887B25124E0B00397635 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../CustomButton.swift; sourceTree = "<group>"; };
+		D3DB887F251258DA00397635 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			children = (
 				D32141F924D1F227008AC87B /* Main.storyboard */,
 				D32141FE24D1F229008AC87B /* LaunchScreen.storyboard */,
-				D3DB887D25124E1500397635 /* Components */,
+				D3DB887E251258C700397635 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,10 +124,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		D3DB887D25124E1500397635 /* Components */ = {
+		D3DB887E251258C700397635 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D3DB887B25124E0B00397635 /* CustomButton.swift */,
+				D3DB887F251258DA00397635 /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 			files = (
 				D321420E24D1F325008AC87B /* WeatherDataModel.swift in Sources */,
 				D321420F24D1F325008AC87B /* WeatherViewController.swift in Sources */,
-				D3DB887C25124E0C00397635 /* CustomButton.swift in Sources */,
+				D3DB8880251258DA00397635 /* CustomButton.swift in Sources */,
 				D32141F424D1F227008AC87B /* AppDelegate.swift in Sources */,
 				D32141F624D1F227008AC87B /* SceneDelegate.swift in Sources */,
 				D321420D24D1F325008AC87B /* ChangeCityViewController.swift in Sources */,
