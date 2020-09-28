@@ -11,7 +11,7 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class WeatherViewController: UIViewController, CLLocationManagerDelegate {
+class WeatherViewController: UITableViewController, CLLocationManagerDelegate {
     
     //MARK: - Properties
     
@@ -27,10 +27,20 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector(("refresh:")), for: .valueChanged)
+        tableView.backgroundView = refreshControl
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    //MARK: - RefreshControl
+    
+    func refresh(_ refreshControl: UIRefreshControl) {
+        viewDidLoad()
+        refreshControl.endRefreshing()
     }
     
     //MARK: - GetWeatherData
