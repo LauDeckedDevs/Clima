@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import Alamofire
 import SwiftyJSON
+import StoreKit
 
 class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -68,6 +69,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         temperatureLabel.text = "\(weatherDataModel.temp)º"
         cityLabel.text = weatherDataModel.city
         weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
+        reviewRequest()
     }
     
     //MARK: - UpdateLocationFuncs
@@ -111,5 +113,15 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
    @IBAction func panSegue(sender: UIPanGestureRecognizer) {
         self.performSegue(withIdentifier: "cardViewSegue", sender: nil)
+    }
+
+
+    //MARK: - RequestReview
+    
+    func reviewRequest() {
+        let alert = UIAlertController(title: "Feedback", message: "Are you enjoying the app so far?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes!", style: .default, handler: {_ in SKStoreReviewController.requestReview()}))
+        present(alert, animated: true)
     }
 }
