@@ -61,6 +61,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
         } else {
             cityLabel.text = "Weather Unavailable"
 			temperatureLabel.text = "?"
+			weatherIcon.image = UIImage(named: "dunno")
         }
     }
     
