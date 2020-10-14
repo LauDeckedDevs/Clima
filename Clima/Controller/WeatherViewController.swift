@@ -60,6 +60,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             updateUIWithWeatherData()
         } else {
             cityLabel.text = "Weather Unavailable"
+			temperatureLabel.text = "?"
         }
     }
     
@@ -116,6 +117,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
    @IBAction func panSegue(sender: UIPanGestureRecognizer) {
 	self.performSegue(withIdentifier: "cardViewSegue", sender: Any?.self)
     }
+	
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "cardViewSegue" {
             let destinationVC = segue.destination as! ChangeCityViewController

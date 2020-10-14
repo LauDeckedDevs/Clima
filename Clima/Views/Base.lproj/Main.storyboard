@@ -25,15 +25,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNR-V6-HMc" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="273" width="414" height="569"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-Cu-XmK" userLabel="City Label">
-                                        <rect key="frame" x="44" y="470" width="326" height="94"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                        <color key="textColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to change the city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kb-7V-vCJ">
                                         <rect key="frame" x="8" y="440" width="398" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Gp6-XX-hKg"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="bBq-sH-ppk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -49,23 +46,33 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pC7-6a-N2f">
                                         <rect key="frame" x="44" y="40" width="326" height="283"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-Cu-XmK" userLabel="City Label">
+                                        <rect key="frame" x="26" y="475" width="362" height="94"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="362" id="6Sd-5K-r2f"/>
+                                            <constraint firstAttribute="height" constant="94" id="OtF-Vf-6tX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <color key="textColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="K5M-jp-OwZ" firstAttribute="centerX" secondItem="1kb-7V-vCJ" secondAttribute="centerX" id="3S0-fV-EZu"/>
+                                    <constraint firstItem="1kb-7V-vCJ" firstAttribute="top" secondItem="K5M-jp-OwZ" secondAttribute="bottom" id="0Cd-yt-XhB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ssc-Cu-XmK" secondAttribute="trailing" constant="26" id="20h-HX-36g"/>
                                     <constraint firstItem="pC7-6a-N2f" firstAttribute="top" secondItem="VNR-V6-HMc" secondAttribute="top" constant="40" id="4EG-DF-WE3"/>
-                                    <constraint firstItem="1kb-7V-vCJ" firstAttribute="centerX" secondItem="Ssc-Cu-XmK" secondAttribute="centerX" id="4Ut-Q8-bDJ"/>
-                                    <constraint firstItem="1kb-7V-vCJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VNR-V6-HMc" secondAttribute="trailingMargin" id="DPJ-HE-nUU"/>
-                                    <constraint firstItem="1kb-7V-vCJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VNR-V6-HMc" secondAttribute="leadingMargin" id="Ji3-sV-By7"/>
-                                    <constraint firstAttribute="bottom" secondItem="1kb-7V-vCJ" secondAttribute="bottom" constant="98" id="LnH-Dr-j5X"/>
-                                    <constraint firstItem="pC7-6a-N2f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ssc-Cu-XmK" secondAttribute="leading" id="NFP-qJ-RPF"/>
-                                    <constraint firstItem="pC7-6a-N2f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ssc-Cu-XmK" secondAttribute="trailing" id="NL8-im-D7i"/>
+                                    <constraint firstItem="1kb-7V-vCJ" firstAttribute="top" secondItem="K5M-jp-OwZ" secondAttribute="bottom" id="7i1-yE-bxv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ssc-Cu-XmK" secondAttribute="bottom" id="Ga4-DS-q78"/>
                                     <constraint firstItem="pC7-6a-N2f" firstAttribute="leading" secondItem="VNR-V6-HMc" secondAttribute="leading" constant="44" id="OpB-5M-vKf"/>
-                                    <constraint firstItem="Ssc-Cu-XmK" firstAttribute="top" secondItem="K5M-jp-OwZ" secondAttribute="bottom" constant="30" id="P3u-y9-bJu"/>
-                                    <constraint firstItem="1kb-7V-vCJ" firstAttribute="top" secondItem="K5M-jp-OwZ" secondAttribute="bottom" id="dvx-jQ-agv"/>
+                                    <constraint firstItem="Ssc-Cu-XmK" firstAttribute="top" secondItem="1kb-7V-vCJ" secondAttribute="bottom" constant="4" id="RLl-tG-oyK"/>
+                                    <constraint firstItem="Ssc-Cu-XmK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VNR-V6-HMc" secondAttribute="leading" constant="20" symbolic="YES" id="SWg-Mi-KGu"/>
+                                    <constraint firstAttribute="trailing" secondItem="1kb-7V-vCJ" secondAttribute="trailing" constant="8" id="Vvk-r3-NW5"/>
+                                    <constraint firstItem="K5M-jp-OwZ" firstAttribute="centerX" secondItem="VNR-V6-HMc" secondAttribute="centerX" id="dlp-pG-BCo"/>
+                                    <constraint firstItem="1kb-7V-vCJ" firstAttribute="leading" secondItem="VNR-V6-HMc" secondAttribute="leading" constant="8" id="f5F-Hu-Zwe"/>
                                     <constraint firstItem="K5M-jp-OwZ" firstAttribute="top" secondItem="pC7-6a-N2f" secondAttribute="bottom" constant="77" id="mzc-pY-oaN"/>
                                     <constraint firstItem="pC7-6a-N2f" firstAttribute="centerX" secondItem="VNR-V6-HMc" secondAttribute="centerX" id="oam-VB-KC3"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ssc-Cu-XmK" secondAttribute="bottom" constant="5" id="sPO-jf-OjE"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Fa2-U9-uis" appends="YES" id="9QB-bQ-qVE"/>
