@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 import StoreKit
 
-class WeatherViewController: UIViewController, CLLocationManagerDelegate {
+class WeatherViewController: UIViewController, CLLocationManagerDelegate, ChangeCityDelegate {
     
     //MARK: - Properties
     
@@ -105,16 +105,23 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: - ChangeCityDelegate
     
-    func userCustomLocation() {
-        
+    func userEnteredANewCityName(city: String) {
+        print(city)
+        let params: [String: String] = ["q": city, "appid": APP_ID]
+        getWeatherData(url: WEATHER_URL, parameters: params)
     }
     
     //MARK: - PanSegue
     
    @IBAction func panSegue(sender: UIPanGestureRecognizer) {
-        self.performSegue(withIdentifier: "cardViewSegue", sender: nil)
+	self.performSegue(withIdentifier: "cardViewSegue", sender: Any?.self)
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cardViewSegue" {
+            let destinationVC = segue.destination as! ChangeCityViewController
+            destinationVC.delegate = self
+        }
+    }
 
     //MARK: - RequestReview
     

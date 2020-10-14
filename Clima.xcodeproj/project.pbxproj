@@ -74,6 +74,7 @@
 				87DB4789513CD69B34D8CE18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		D32141F124D1F227008AC87B /* Products */ = {
 			isa = PBXGroup;
@@ -116,8 +117,8 @@
 		D38682CE24E193640083F679 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D321420A24D1F325008AC87B /* ChangeCityViewController.swift */,
 				D321420C24D1F325008AC87B /* WeatherViewController.swift */,
+				D321420A24D1F325008AC87B /* ChangeCityViewController.swift */,
 				D32141F324D1F227008AC87B /* AppDelegate.swift */,
 				D32141F524D1F227008AC87B /* SceneDelegate.swift */,
 			);
