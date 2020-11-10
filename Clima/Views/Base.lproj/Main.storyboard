@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,10 +92,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E0h-aX-oBb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9I5-Di-FWR"/>
+                            <constraint firstItem="E0h-aX-oBb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="D3s-pV-9UP"/>
                             <constraint firstItem="E0h-aX-oBb" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="ET9-CU-3wA"/>
                             <constraint firstItem="AT7-It-Fyf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="33" id="Kct-rW-2za"/>
                             <constraint firstItem="AT7-It-Fyf" firstAttribute="centerX" secondItem="VNR-V6-HMc" secondAttribute="centerX" id="UBP-Uo-FKV"/>
                             <constraint firstItem="E0h-aX-oBb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-44" id="Xyx-sb-4XC"/>
+                            <constraint firstAttribute="bottom" secondItem="E0h-aX-oBb" secondAttribute="bottom" id="aQM-Bg-5ea"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VNR-V6-HMc" secondAttribute="bottom" constant="20" id="cNl-1G-Esg"/>
                             <constraint firstItem="E0h-aX-oBb" firstAttribute="leading" secondItem="VNR-V6-HMc" secondAttribute="leading" id="cze-vM-SmU"/>
                             <constraint firstItem="VNR-V6-HMc" firstAttribute="top" secondItem="AT7-It-Fyf" secondAttribute="bottom" constant="35" id="fUV-6L-sxi"/>
@@ -103,7 +106,6 @@
                             <constraint firstItem="E0h-aX-oBb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="zub-sl-Jeq"/>
                         </constraints>
                     </view>
-                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="Ssc-Cu-XmK" id="8PV-i3-tg0"/>
                         <outlet property="temperatureLabel" destination="AT7-It-Fyf" id="aNl-QI-DaP"/>
@@ -136,7 +138,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdY-a2-R5m" userLabel="Get Weather Button" customClass="CustomButton" customModule="Clima" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdY-a2-R5m" userLabel="Get Weather Button" customClass="CustomButton" customModule="Clima" customModuleProvider="target">
                                 <rect key="frame" x="107.66666666666669" y="210" width="199" height="44"/>
                                 <color key="backgroundColor" red="0.082644440233707428" green="0.24231112003326416" blue="0.35060542821884155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -195,6 +197,11 @@
             <point key="canvasLocation" x="833.33333333333337" y="259.15178571428572"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="PdY-a2-R5m">
+            <size key="intrinsicContentSize" width="134" height="44"/>
+        </designable>
+    </designables>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="background" width="500" height="755"/>
